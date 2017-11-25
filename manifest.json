@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+  "name": "Voice Recog",
+  "minimum_chrome_version": "24.0.1307.0",
+  "version": "0.0.1",
+  "homepage_url": "http://www.accessibilitycourse.com",
+  "icons": {
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*/*"
+      ],
+      "js": [
+          "scripts/jquery.min.js",
+          "scripts/voiceRecog.js"
+      ],
+      "css": ["css/reader.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "permissions": [
+    "*://*/*"
+  ]
+}
