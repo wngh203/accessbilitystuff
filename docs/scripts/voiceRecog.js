@@ -1,4 +1,4 @@
-var log   = console.log.bind(this);
+var log   = console.log.bind(this); 
 var langs =
 [['Afrikaans',       ['af-ZA']],
  ['Bahasa Indonesia',['id-ID']],
