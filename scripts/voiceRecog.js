@@ -4,8 +4,6 @@ var ignore_onend;
 
 var last_text_elem = undefined;
 
-
-
 var recognition = new webkitSpeechRecognition();
 recognition.continuous     = false;
 recognition.interimResults = false;
@@ -50,10 +48,6 @@ recognition.onresult = function(event) {
   showResult(result);
   action(result);
 };
-
-
-
-
 
 
 function action (result) {
@@ -108,19 +102,19 @@ function action (result) {
             last_text_elem.val(input_value);
           }
           else {
-            alert("fuck you again.");
+            alert("error1");
             return;
           }
         }
         
         else {
-         alert("fuck you too.");
+         alert("error2");
          return;
         }
     }
     
     else {
-        alert("Fuck you.");
+        alert("error3");
         return;
     }
 }
@@ -140,7 +134,7 @@ $(document).ready(function () {
       last_text_elem = $(this);
     });
   
-    $("#fuckme").click(function () {
+    $("#pressme").click(function () {
         if (recognizing == false) {
             recognition.start();
             showStatus("Info: Voice Recog started.");
